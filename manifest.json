@@ -1,0 +1,18 @@
+{
+  "name": "zqm-shield",
+  "version": "1.0.0",
+  "description": "Quarantine, study, classify evidence pack for ZQM Computing Shield",
+  "license": "MIT",
+  "brand": "ZQM Computing",
+  "contact": "zqmcomputing@gmail.com",
+  "files": [
+    "src/quarantine.ps1",
+    "src/study.py",
+    "src/classify.py",
+    "src/sign.py",
+    "release.py"
+  ],
+  "build": [
+    "python release.py"
+  ]
+}
