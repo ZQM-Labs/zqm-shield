@@ -1,0 +1,63 @@
+{
+  "version": "1.0.0",
+  "name": "zqm-shield",
+  "brand": "ZQM Computing",
+  "contact": "zqmcomputing@gmail.com",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "b5cad1cd2384d353e1737898d43302b24c5f8637b000dc5680b4d4b5ed2fd955",
+      "bytes": 437
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "421b204d45b6f7b26a20fd7086eb211afa193f4c8acb3a85da91e95926cba40a",
+      "bytes": 154
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "0d88d3d7ea271673ac747038a695e8f1deaf152d83c7cb2f282b11cb30f65c9c",
+      "bytes": 1070
+    },
+    {
+      "path": "README.md",
+      "sha256": "e4b668275faadfe8b5c808d48cafc40659cab1d5278bd6fb9144c629eb9459b6",
+      "bytes": 821
+    },
+    {
+      "path": "SWORD_AND_SHIELD_PLAN.md",
+      "sha256": "913a1f19a6ba2b0d935f59c6b861da534fc105515d507612e8ae8bfdef4ef2d1",
+      "bytes": 1819
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "c28db716b8f3568c5ef1a7c0ce3c372b5941d7ca77626f42f26d3cf98d76fe61",
+      "bytes": 388
+    },
+    {
+      "path": "release.py",
+      "sha256": "72aedf13b6594543ea3b09fed8639e8162d5f5264a33ca7151811b049703ae79",
+      "bytes": 1089
+    },
+    {
+      "path": "src/classify.py",
+      "sha256": "d89ad0c5bce79cafb0a032a1c670bde24aeb848e337551d8825a290fd70ce457",
+      "bytes": 1268
+    },
+    {
+      "path": "src/quarantine.ps1",
+      "sha256": "4067ac48ec16c7ce9ff88bf07f12cb27c72cba6e333863fc916147431c69925e",
+      "bytes": 1414
+    },
+    {
+      "path": "src/sign.py",
+      "sha256": "ebf4369c7b2bd10a5af04606a6b13e13a5a3ffb246a966ba9d95aa5e5ffe1d65",
+      "bytes": 2318
+    },
+    {
+      "path": "src/study.py",
+      "sha256": "c9f2859d087b2742024a86178ed92f5d9caa8b1d4fb3372c22eea28858fba557",
+      "bytes": 1679
+    }
+  ]
+}
