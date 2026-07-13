@@ -17,7 +17,7 @@ Only ZQM Computing appears in buyer-facing code/docs/responses. Sword stays inte
 - Quarantine (`src/quarantine.ps1`), study (`src/study.py`), classify (`src/classify.py`), sign stub (`src/sign.py`), release manifest all present
 - `release.py` verified: 8-file manifest, exit 0
 - `omnimap_primes.py --commas` delivers 2196-row prime-scoped comma atlas
-- `zqm-attestation-toolkit` live at GitHub as `ZQM-Computing/zqm-attestation-toolkit` with CI, SKU catalog, commercial docs
+- `zqm-attestation-toolkit` live at GitHub as `ZQM-Labs/zqm-attestation-toolkit` with CI, SKU catalog, commercial docs
 
 ## Remaining work
 1. Relocate fulfill bot from `.hermes/scratch/scripts/fulfill_bot.py` into `zqm-attestation-toolkit/scripts/fulfill_bot.py` and wire workflow `run:` path.
