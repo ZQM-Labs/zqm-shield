@@ -1,25 +1,17 @@
-# ZQM Shield
+# ZQM-Computing shield
 
-Quarantine, study, classify evidence pack for Windows endpoint incidents.
+[![Sponsor ZQM-Computing](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&color=red&logo=githubsponsors&link=https://github.com/sponsors/ZQM-Computing)](https://github.com/sponsors/ZQM-Computing)
 
-ZQM Computing contact: `zqmcomputing@gmail.com`.
+Lightweight Windows endpoint security helpers packaged for direct use in PowerShell environments. Intended as a public reference surface for the ZQM attestation toolkit family.
 
-## What it does
-- Copies attacker/artifact evidence to quarantine with preserved SHA-256
-- Builds evidence pack: who, what, where, why
-- Classifies as benign or suspicious
-- Optional CMS signature with `CN=Alex Zelenski`
+## Usage
 
-## Buy
-1. Open a GitHub issue labeled `purchase`
-2. Fulfillment bot delivers release and ESA contact instructions automatically.
+Use in PowerShell 5.1+ on Windows 10/11. Review the included scripts before importing or running them.
 
-## Deliverables
-- `release-zqm-shield-1.0.0.manifest.json`
-- Signed evidence artifacts on customer endpoint only
+## Contact
 
-## License
-MIT — upstream notices preserved. Enterprise procurement clean.
+ZQM Computing — zqmcomputing@gmail.com
 
-## Stack notes
-Quarantine is PowerShell-native. Study and classify are Python 3.11. No Velociraptor/Wazuh/Elastic in the product surface.
+## Support
+
+Development is funded commercially — see the toolkit's [FUNDING](https://github.com/ZQM-Labs/zqm-attestation-toolkit/blob/main/.github/FUNDING.yml) for sponsorship, procurement, and no-KYC options. You can also [sponsor ZQM-Computing on GitHub](https://github.com/sponsors/ZQM-Computing).

@@ -1,4 +1,4 @@
-# SECURITY
+# CONTRIBUTING
 
 ## Note
 This file was added to close public-surface documentation gaps.

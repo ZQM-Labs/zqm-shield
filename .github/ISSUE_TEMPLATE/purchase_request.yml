@@ -1,0 +1,22 @@
+name: Purchase Request
+description: Request a commercial seat license or add-on.
+title: "[PURCHASE] "
+labels: [purchase]
+body:
+  - type: input
+    id: sku
+    attributes:
+      label: SKU
+      description: e.g. ZQM-ATTEST-P-2026
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact email
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
