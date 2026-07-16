@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "bytes": 1
+    }
+  ],
+  "classification": "suspicious",
+  "classified_at": "2026-07-16T03:09:48.674496Z",
+  "classification_notes": "Automated heuristic: empty or zero-byte artifacts classified benign; non-empty preserved artifacts classified suspicious."
+}
