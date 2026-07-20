@@ -3,6 +3,6 @@
 # Procurement: pytest https://github.com/pytest-dev/pytest MIT
 # Procurement: jsonschema https://github.com/python-jsonschema/jsonschema MIT
 # Procurement: rich https://github.com/Textualize/rich MIT
-pytest>=8.3,<9.0
+pytest>=9.1.1,<10.0
 jsonschema>=4.21,<5.0
 rich>=13.9,<14.0
