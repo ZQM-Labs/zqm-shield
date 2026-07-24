@@ -1,22 +1,46 @@
 name: Purchase Request
-description: Request a commercial seat license or add-on.
-title: "[PURCHASE] "
-labels: [purchase]
+description: Submit a purchase request for a ZQM Toolkit license.
+title: "purchase: <SKU> - <email>"
+labels: ["purchase"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        No KYC, no account required.
+        Read commercial terms and payment rails first: [COMMERCIAL.md](./COMMERCIAL.md)
   - type: input
     id: sku
     attributes:
       label: SKU
-      description: e.g. ZQM-ATTEST-P-2026
+      description: See SKU_CATALOG.md — e.g. ZQM-ATTEST-EP, ZQM-RET-MO, or a per-repo SKU.
+      placeholder: ZQM-ATTEST-EP
     validations:
       required: true
   - type: input
-    id: contact
+    id: email
     attributes:
-      label: Contact email
+      label: Buyer email
+      description: Email used for the license ID and fulfillment delivery.
+      placeholder: you@example.com
     validations:
       required: true
-  - type: textarea
-    id: notes
+  - type: input
+    id: txid
     attributes:
-      label: Notes
+      label: Transaction ID
+      description: Crypto txid / payment reference for this purchase. Required for fulfillment.
+      placeholder: blockchain txid
+    validations:
+      required: true
+  - type: input
+    id: addons
+    attributes:
+      label: Add-ons
+      description: "Optional add-on SKUs (see SKU_CATALOG.md). Comma-separate if multiple."
+      placeholder: "ZQM-ADD-REMEDIATION"
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        Payment rails: see COMMERCIAL.md
