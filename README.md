@@ -15,3 +15,13 @@ ZQM Computing — zqmcomputing@gmail.com
 ## Support
 
 Development is funded commercially — see the toolkit's [FUNDING](https://github.com/ZQM-Labs/zqm-attestation-toolkit/blob/main/.github/FUNDING.yml) for sponsorship, procurement, and no-KYC options. You can also [sponsor ZQM-Computing on GitHub](https://github.com/sponsors/ZQM-Computing).
+
+## Commercial Licensing & Procurement
+
+This repository is free for personal and audit use under its stated license. Enterprise procurement, retainers, and add-on tiers are available:
+
+- Pricing & SKUs: [COMMERCIAL.md](COMMERCIAL.md) · [SKU_CATALOG.md](SKU_CATALOG.md)
+- Start a purchase: open a [Purchase request](https://github.com/ZQM-Labs/zqm-shield/issues/new?template=purchase_request.yml) issue
+- Contact: zqmcomputing@gmail.com
+
+All deliverables are CMS-signed and independently verifiable.
