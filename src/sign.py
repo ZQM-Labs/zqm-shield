@@ -42,7 +42,7 @@ def main():
         print('Not a directory:', artifact_dir)
         sys.exit(2)
 
-    candidates = ['manifest.json', 'classification.json'] + extra
+    candidates = ['manifest.json', 'classification.json', *extra]
     files = [os.path.join(artifact_dir, c) for c in candidates if os.path.exists(os.path.join(artifact_dir, c))]
 
     if not files:
