@@ -54,3 +54,7 @@ MIT — see LICENSE file.
 
 Alex Zelenski — zqmcomputing@gmail.com
 Brand: ZQM Computing / ZQM-Labs
+
+## Integration: zqm-intel-platforms
+
+This repo integrates with the [zqm-intel-platforms](https://github.com/ZQM-Labs/zqm-intel-platforms) hub for fleet-wide attestation and orchestration.
