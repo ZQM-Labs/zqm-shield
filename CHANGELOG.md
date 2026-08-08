@@ -1,6 +1,6 @@
-# CHANGELOG
+# Changelog
 
-## Note
-This file was added to close public-surface documentation gaps.
+All notable changes to this project will be documented in this file.
 
-Contact: zqmcomputing@gmail.com
+## [Unreleased]
+- Initial repository setup and commercial surface alignment.
