@@ -1,27 +1,37 @@
-# ZQM Computing — SKU Catalog
+# ZQM Attestation Toolkit — SKU Catalog
 
-Contact: zqmcomputing@gmail.com
-Brand: ZQM Computing (code-signing cert CN=Alex Zelenski)
-Public license: MIT / Apache-2.0 per-repo (see LICENSE).
-Commercial license, retainers, and add-ons: fair-code, no KYC — see COMMERCIAL.md.
+## Services
 
-## Service SKUs
-| SKU | Service | Rate |
-|---|---|---|
-| ZQM-ATTEST-EP | Endpoint forensic attestation | $150–500 / endpoint |
-| ZQM-AUTO-HR | Automation engineering | $75–150 / hr |
-| ZQM-RET-MO | Monthly retainer | $500–3000 / mo |
-| ZQM-ASSESS | One-off assessment / scope call | quote |
+| SKU | Description | Price |
+|-----|-------------|-------|
+| ATK-ENDPOINT | Single endpoint attestation (TPM/BitLocker/driver audit) | $150–500 |
+| ATK-AUTOMATION | Fleet automation / scripting | $75–150/hr |
+| ATK-RETAINER | Monthly retainership | $500–3,000/mo |
+| ATK-HOSTED | Hosted attestation-as-a-service | Custom |
 
-## Commercial Add-ons
-| Add-on SKU | Description |
-|---|---|
-| ZQM-ADD-REMEDIATION | Guided remediation runbook |
-| ZQM-ADD-VENDOR | Vendor attestation questionnaire + review matrix |
+## Add-ons
 
-## Fair-Code Purchase Flow
-1. Open a GitHub issue with the Purchase Request template (label: `purchase`).
-2. Pay via the rail listed in COMMERCIAL.md; include the txid in the issue.
-3. Fulfillment bot issues a license ID + download link to the signed release.
+| Add-on | Description |
+|--------|-------------|
+| CMS-SIGNED-DELIVERABLE | Detached CMS-signed attestation report |
+| FLEET-HEALTH-REPORT | Hash/cert provenance + fleet health export |
+| PQC-READINESS | Post-quantum crypto posture assessment |
+| DFIR-SWEEP | Forensic council multi-lane sweep |
 
-No account, no KYC. License ID is your receipt — do not share it publicly.
+## License tiers
+
+| Tier | Surface | License |
+|------|---------|---------|
+| T2 direct | Repo checkout | MIT/Apache-2.0/BSD-3 |
+| T3 plugins | Cross-harness agents | Interface-preserve |
+| T4 data/media | API + content | Restricted |
+
+## Contact
+
+- Email: zqmcomputing@gmail.com
+- Domain: zqmlabs.com
+- Owner: Alex Zelenski (CN=Alex Zelenski)
+
+## Payment rails
+
+See `PAYMENT_INSTRUCTIONS.md` (not published in public summaries).
