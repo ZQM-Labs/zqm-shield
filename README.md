@@ -63,3 +63,10 @@ Brand: ZQM Computing / ZQM-Labs
 ## Integration: zqm-intel-platforms
 
 This repo integrates with the [zqm-intel-platforms](https://github.com/ZQM-Labs/zqm-intel-platforms) hub for fleet-wide attestation and orchestration.
+
+## Related Repositories
+
+- [ZQM-Labs/zqm-attestation-toolkit](https://github.com/ZQM-Labs/zqm-attestation-toolkit) — Windows attestation, BitLocker, TPM, DFIR
+- [ZQM-Labs/zqm-security-policy](https://github.com/ZQM-Labs/zqm-security-policy) — CIS benchmarks and Windows hardening
+- [ZQM-Labs/pqc-readiness-toolkit](https://github.com/ZQM-Labs/pqc-readiness-toolkit) — post-quantum cryptography readiness
+- [ZQM-Labs/zqm-public-tools](https://github.com/ZQM-Labs/zqm-public-tools) — open-source Windows security utilities
