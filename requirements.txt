@@ -5,6 +5,6 @@
 # Procurement: rich https://github.com/Textualize/rich MIT
 # Procurement: zqm-intel-platforms https://github.com/ZQM-Labs/zqm-intel-platforms MIT
 pytest>=8.3,<9.0
-jsonschema>=4.21,<5.0
+jsonschema>=4.26.0,<5.0
 rich>=13.9,<14.0
 zqm-intel-platforms>=0.1.0
