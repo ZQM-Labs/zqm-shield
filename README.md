@@ -1,37 +1,56 @@
 # zqm-shield
 
-## Purpose
-Quarantine/classify pipeline for isolated artifact handling.
+Windows fleet attestation, quarantine, packaging, and Authenticode signing toolkit.
 
-## What it does
-- Copies artifacts to quarantine with preserved SHA-256 (`src/quarantine.py`)
-- Builds evidence pack (`src/study.py`)
-- Classifies artifacts (`src/classify.py`)
-- Signs evidence with Authenticode (`src/sign.py`)
+## About
 
-## Integration: zqm-intel-platforms
-zqm-shield is a PowerShell-first repo. It does not vendor `zqm-intel-platforms`
-into its runtime build surface; instead, use the wrapper at
-`examples/intel_wrapper_example.md` for cross-language export of quarantine
-evidence to SIEM sinks defined by `zqm-intel-platforms`.
+`zqm-shield` provides defensive attestation workflows for Windows endpoints: evidence collection, quarantine/packaging, release verification, and Authenticode signing. It is the primary shield-side toolchain for ZQM fleet attestation.
 
-## Requirements
-Use in PowerShell 5.1+ on Windows 10/11. Review the included scripts before importing or running them.
+## Installation
 
-## Contact
-ZQM Computing — zqmcomputing@gmail.com
+```bash
+pip install -e .
+```
 
-## Support
-Development is funded commercially — see the toolkit's [FUNDING](https://github.com/ZQM-Labs/zqm-attestation-toolkit/blob/main/.github/FUNDING.yml) for sponsorship, procurement, and no-KYC options. You can also [sponsor ZQM-Computing on GitHub](https://github.com/sponsors/ZQM-Computing).
+Requires Python 3.11+ on Windows. Authenticode signing requires code-signing certificate access.
 
-## Commercial Licensing & Procurement
-This repository is free for personal and audit use under its stated license. Enterprise procurement, retainers, and add-on tiers are available:
+## Usage
 
-- Pricing & SKUs: [COMMERCIAL.md](COMMERCIAL.md) · [SKU_CATALOG.md](SKU_CATALOG.md)
-- Start a purchase: open a [Purchase request](https://github.com/ZQM-Labs/zqm-shield/issues/new?template=purchase_request.yml) issue
-- Contact: zqmcomputing@gmail.com
+```bash
+# Collect endpoint evidence
+zqm-shield collect --endpoint .
 
-All deliverables are CMS-signed and independently verifiable.
+# Quarantine and package evidence
+zqm-shield quarantine pack --input ./evidence/ --output ./packages/
+
+# Verify a release bundle
+zqm-shield verify --package ./packages/release.zip
+
+# Sign a deliverable
+zqm-shield sign --file ./packages/report.json --cert "CN=Alex Zelenski"
+```
+
+## Features
+
+- Endpoint attestation evidence collection
+- Quarantine packaging with SHA256 provenance
+- Release verification (ZQ signature checks, chain integrity)
+- Detached Authenticode/CMS signing of deliverables
+- Windows driver audit and code-signing validation
+- OSQuery-backed fleet queries
+- CI-validated with ruff/mypy
+
+## CI
+
+[![CI](https://github.com/ZQM-Labs/zqm-shield/actions/workflows/ci.yml/badge.svg)](https://github.com/ZQM-Labs/zqm-shield/actions)
+[![Ruff](https://img.shields.io/badge/lint-ruff-blue)](https://github.com/astral-sh/ruff)
+[![Mypy](https://img.shields.io/badge/typecheck-mypy-blue)](https://github.com/python/mypy)
 
 ## License
-See repo license file. No AGPL/AGPL/BSL/CPAL on brand surface.
+
+MIT — see LICENSE file.
+
+## Contact
+
+Alex Zelenski — zqmcomputing@gmail.com
+Brand: ZQM Computing / ZQM-Labs
