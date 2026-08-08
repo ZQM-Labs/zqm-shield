@@ -6,5 +6,5 @@
 # Procurement: zqm-intel-platforms https://github.com/ZQM-Labs/zqm-intel-platforms MIT
 pytest>=8.3,<9.0
 jsonschema>=4.21,<5.0
-rich>=13.9,<14.0
+rich>=15.0.0,<16.0
 zqm-intel-platforms>=0.1.0
