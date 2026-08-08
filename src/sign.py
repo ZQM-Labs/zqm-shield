@@ -8,7 +8,6 @@ import os
 import subprocess
 import sys
 
-
 PS_TPL = """
 $ErrorActionPreference = 'Stop'
 $store = 'Cert:\\CurrentUser\\My'

@@ -1,4 +1,6 @@
-import json, subprocess, sys
+import json
+import subprocess
+import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
@@ -11,7 +13,7 @@ def test_classify_exit_zero_and_output():
     out = qdir / 'classification.json'
     if out.exists():
         out.unlink()
-    p = subprocess.run([sys.executable, str(REPO / 'src' / 'classify.py'), str(qdir)], capture_output=True, text=True)
+    p = subprocess.run([sys.executable, str(REPO / 'src' / 'classify.py'), str(qdir)], capture_output=True, text=True, check=False)
     assert p.returncode == 0, p.stderr
     assert out.exists()
     data = json.loads(out.read_text(encoding='utf-8'))

@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """src/study.py - Build evidence pack with who/what/where/why + hash manifest."""
-import hashlib, json, os, sys, datetime
+import datetime
+import hashlib
+import json
+import os
+import sys
+
 
 def sha(path):
     h = hashlib.sha256()
@@ -10,11 +15,13 @@ def sha(path):
 
 def main():
     if len(sys.argv) < 2:
-        print('Usage: study.py <quarantine_dir>'); sys.exit(2)
+        print('Usage: study.py <quarantine_dir>')
+        sys.exit(2)
     qdir = sys.argv[1]
     manifest_path = os.path.join(qdir, 'manifest.json')
     if os.path.exists(manifest_path):
-        print('Evidence already studied:', manifest_path); return
+        print('Evidence already studied:', manifest_path)
+        return
     source_hash_path = os.path.join(qdir, 'source.sha256')
     source_sha = ''
     if os.path.exists(source_hash_path):
@@ -34,7 +41,7 @@ def main():
       'what': 'copied artifact; source hash preserved under source.sha256',
       'where': qdir,
       'why': 'incident triage: isolate for study and classification',
-      'collected_at': datetime.datetime.utcnow().isoformat() + 'Z',
+      'collected_at': datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00', 'Z'),
       'files': walk
     }
     out = os.path.join(qdir, 'manifest.json')

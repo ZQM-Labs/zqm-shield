@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """release.py - Package ZQM Shield release with SHA-256 manifest."""
-import hashlib, json, os, sys
+import hashlib
+import json
+import os
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -18,7 +20,7 @@ def main():
         for name in names:
             abs_path = os.path.join(root, name)
             rel = os.path.relpath(abs_path, ROOT).replace('\\', '/')
-            if rel.startswith('release-') or rel.startswith('.git'):
+            if rel.startswith(('release-', '.git')):
                 continue
             files.append((rel, sha(abs_path), os.path.getsize(abs_path)))
     files.sort()

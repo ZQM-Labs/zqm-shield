@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
 """src/classify.py - Classify quarantined artifact as benign, suspicious, malicious."""
-import json, os, sys
+import json
+import os
+import sys
+
 
 def main():
     if len(sys.argv) < 2:
-        print('Usage: classify.py <quarantine_dir>'); sys.exit(2)
+        print('Usage: classify.py <quarantine_dir>')
+        sys.exit(2)
     qdir = sys.argv[1]
     manifest_path = os.path.join(qdir, 'manifest.json')
     if not os.path.exists(manifest_path):
-        print('Missing evidence. Run study.py first.'); sys.exit(2)
+        print('Missing evidence. Run study.py first.')
+        sys.exit(2)
     with open(manifest_path) as f:
         ev = json.load(f)
     file_count = len(ev.get('files', []))
