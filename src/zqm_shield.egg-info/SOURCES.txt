@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/zqm_shield.egg-info/PKG-INFO
+src/zqm_shield.egg-info/SOURCES.txt
+src/zqm_shield.egg-info/dependency_links.txt
+src/zqm_shield.egg-info/requires.txt
+src/zqm_shield.egg-info/top_level.txt
+tests/test_classify.py

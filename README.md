@@ -1,55 +1,58 @@
 # zqm-shield
 
+<<<<<<< HEAD
 ![CI](https://github.com/ZQM-Labs/zqm-shield/actions/workflows/ci.yml/badge.svg)
 ![Tests](https://github.com/ZQM-Labs/zqm-shield/actions/workflows/tests.yml/badge.svg)
 ![Ruff](https://img.shields.io/badge/lint-ruff-blue)
 ![Mypy](https://img.shields.io/badge/type--check-mypy-green)
 
 Windows fleet attestation, quarantine, packaging, and Authenticode signing toolkit.
+||||||| parent of b0d72df (chore: T2 commercial surface + lint fixes)
+Windows fleet attestation, quarantine, packaging, and Authenticode signing toolkit.
+=======
+Lightweight Windows endpoint quarantine/classify/sign pipeline.
+>>>>>>> b0d72df (chore: T2 commercial surface + lint fixes)
 
 ## About
 
-`zqm-shield` provides defensive attestation workflows for Windows endpoints: evidence collection, quarantine/packaging, release verification, and Authenticode signing. It is the primary shield-side toolchain for ZQM fleet attestation.
+`zqm-shield` provides the classification, quarantine, and detached-signature pipeline for ZQM endpoint attestation. It consumes `zqm-intel-platforms` for shared OSINT/CTI/SIEM/Windows-telemetry primitives.
 
 ## Installation
 
 ```bash
-pip install -e .
+pip install -r requirements.txt
 ```
 
-Requires Python 3.11+ on Windows. Authenticode signing requires code-signing certificate access.
+Requires Python 3.11+ on Windows.
 
 ## Usage
 
-```bash
-# Collect endpoint evidence
-zqm-shield collect --endpoint .
+```powershell
+# Classify evidence
+python -m zqm_shield classify --input ./evidence/ --output ./classified/
 
-# Quarantine and package evidence
-zqm-shield quarantine pack --input ./evidence/ --output ./packages/
+# Quarantine flagged artifacts
+python -m zqm_shield quarantine --input ./classified/ --output ./quarantined/
 
-# Verify a release bundle
-zqm-shield verify --package ./packages/release.zip
-
-# Sign a deliverable
-zqm-shield sign --file ./packages/report.json --cert "CN=Alex Zelenski"
+# Sign deliverables
+python -m zqm_shield sign --input ./quarantined/ --output ./signed/
 ```
 
 ## Features
 
-- Endpoint attestation evidence collection
-- Quarantine packaging with SHA256 provenance
-- Release verification (ZQ signature checks, chain integrity)
-- Detached Authenticode/CMS signing of deliverables
-- Windows driver audit and code-signing validation
-- OSQuery-backed fleet queries
-- CI-validated with ruff/mypy
+- Evidence classification and quarantine staging
+- Detached signature on attestation artifacts
+- JSON schema validation via jsonschema
+- Rich console output for operator workflows
+- Pytest-based test surface
 
 ## CI
 
 [![CI](https://github.com/ZQM-Labs/zqm-shield/actions/workflows/ci.yml/badge.svg)](https://github.com/ZQM-Labs/zqm-shield/actions)
-[![Ruff](https://img.shields.io/badge/lint-ruff-blue)](https://github.com/astral-sh/ruff)
-[![Mypy](https://img.shields.io/badge/typecheck-mypy-blue)](https://github.com/python/mypy)
+
+## Integration: zqm-intel-platforms
+
+This repo integrates with `zqm-intel-platforms` for shared OSINT/CTI/SIEM/Windows-telemetry primitives.
 
 ## License
 
@@ -59,6 +62,7 @@ MIT — see LICENSE file.
 
 Alex Zelenski — zqmcomputing@gmail.com
 Brand: ZQM Computing / ZQM-Labs
+<<<<<<< HEAD
 
 ## Integration: zqm-intel-platforms
 
@@ -70,3 +74,10 @@ This repo integrates with the [zqm-intel-platforms](https://github.com/ZQM-Labs/
 - [ZQM-Labs/zqm-security-policy](https://github.com/ZQM-Labs/zqm-security-policy) — CIS benchmarks and Windows hardening
 - [ZQM-Labs/pqc-readiness-toolkit](https://github.com/ZQM-Labs/pqc-readiness-toolkit) — post-quantum cryptography readiness
 - [ZQM-Labs/zqm-public-tools](https://github.com/ZQM-Labs/zqm-public-tools) — open-source Windows security utilities
+||||||| parent of b0d72df (chore: T2 commercial surface + lint fixes)
+
+## Integration: zqm-intel-platforms
+
+This repo integrates with the [zqm-intel-platforms](https://github.com/ZQM-Labs/zqm-intel-platforms) hub for fleet-wide attestation and orchestration.
+=======
+>>>>>>> b0d72df (chore: T2 commercial surface + lint fixes)

@@ -1,0 +1,4 @@
+pytest<9.0,>=8.3
+jsonschema<5.0,>=4.21
+rich<14.0,>=13.9
+zqm-intel-platforms>=0.1.0

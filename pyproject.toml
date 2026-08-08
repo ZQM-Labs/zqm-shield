@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zqm-shield"
+version = "0.1.0"
+description = "Quarantine/classify/sign pipeline for ZQM attestation deliverables"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "pytest>=8.3,<9.0",
+    "jsonschema>=4.21,<5.0",
+    "rich>=13.9,<14.0",
+    "zqm-intel-platforms>=0.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+ignore = ["Python", "pythoncore-3.14-64", "samples", "data"]
+
+[project.urls]
+Homepage = "https://github.com/ZQM-Labs/zqm-shield"
+Repository = "https://github.com/ZQM-Labs/zqm-shield.git"

@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: zqm-shield
+Version: 0.1.0
+Summary: Quarantine/classify/sign pipeline for ZQM attestation deliverables
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/ZQM-Labs/zqm-shield
+Project-URL: Repository, https://github.com/ZQM-Labs/zqm-shield.git
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest<9.0,>=8.3
+Requires-Dist: jsonschema<5.0,>=4.21
+Requires-Dist: rich<14.0,>=13.9
+Requires-Dist: zqm-intel-platforms>=0.1.0
+Dynamic: license-file
+
+# zqm-shield
+
+Lightweight Windows endpoint quarantine/classify/sign pipeline.
+
+## About
+
+`zqm-shield` provides the classification, quarantine, and detached-signature pipeline for ZQM endpoint attestation. It consumes `zqm-intel-platforms` for shared OSINT/CTI/SIEM/Windows-telemetry primitives.
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+Requires Python 3.11+ on Windows.
+
+## Usage
+
+```powershell
+# Classify evidence
+python -m zqm_shield classify --input ./evidence/ --output ./classified/
+
+# Quarantine flagged artifacts
+python -m zqm_shield quarantine --input ./classified/ --output ./quarantined/
+
+# Sign deliverables
+python -m zqm_shield sign --input ./quarantined/ --output ./signed/
+```
+
+## Features
+
+- Evidence classification and quarantine staging
+- Detached signature on attestation artifacts
+- JSON schema validation via jsonschema
+- Rich console output for operator workflows
+- Pytest-based test surface
+
+## CI
+
+[![CI](https://github.com/ZQM-Labs/zqm-shield/actions/workflows/ci.yml/badge.svg)](https://github.com/ZQM-Labs/zqm-shield/actions)
+
+## Integration: zqm-intel-platforms
+
+This repo integrates with `zqm-intel-platforms` for shared OSINT/CTI/SIEM/Windows-telemetry primitives.
+
+## License
+
+MIT — see LICENSE file.
+
+## Contact
+
+Alex Zelenski — zqmcomputing@gmail.com
+Brand: ZQM Computing / ZQM-Labs
